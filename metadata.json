@@ -1,0 +1,6 @@
+{
+  "name": "MotionFX Studio",
+  "description": "All-in-one video and motion graphics editor combining CapCut timeline editing, Alight Motion keyframing & curves, and After Effects visual effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
