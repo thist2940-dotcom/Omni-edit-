@@ -50,8 +50,8 @@ jobs:
 
       - name: Verify APK package and signature
         run: |
-          apksigner verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk
-          aapt dump badging app/build/outputs/apk/debug/app-debug.apk
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging app/build/outputs/apk/debug/app-debug.apk
 
       - name: Prepare direct APK download
         run: cp app/build/outputs/apk/debug/app-debug.apk omni-edit-build-${{ github.run_number }}.apk
