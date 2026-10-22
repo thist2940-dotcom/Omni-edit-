@@ -58,7 +58,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     private val _isLooping = MutableStateFlow(true)
     val isLooping: StateFlow<Boolean> = _isLooping.asStateFlow()
 
-    private val _selectedClipId = MutableStateFlow<String?>(null)
+    private val _selectedClipId = MutableStateFlow<String?>(
+        defaultInitialProject.tracks.flatMap { it.clips }.firstOrNull()?.id
+    )
     val selectedClipId: StateFlow<String?> = _selectedClipId.asStateFlow()
 
     private val _selectedTrackId = MutableStateFlow<String?>(null)

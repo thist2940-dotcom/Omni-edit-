@@ -54,7 +54,7 @@ object MotionEngine {
                     opacity *= progress
                 }
                 TransitionType.FLASH_WHITE -> {
-                    flashAlpha = (1f - progress) * 0.9f
+                    flashAlpha = (1f - progress) * 0.35f
                 }
                 TransitionType.ZOOM_IN -> {
                     finalScaleX *= (0.3f + 0.7f * progress)
@@ -94,7 +94,7 @@ object MotionEngine {
                     opacity *= progress
                 }
                 TransitionType.FLASH_WHITE -> {
-                    flashAlpha = max(flashAlpha, (1f - progress) * 0.9f)
+                    flashAlpha = max(flashAlpha, (1f - progress) * 0.35f)
                 }
                 TransitionType.ZOOM_OUT -> {
                     finalScaleX *= (0.3f + 0.7f * progress)
